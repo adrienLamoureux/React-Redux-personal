@@ -9,6 +9,7 @@
 .env
 /.grunt
 _SpecRunner.html
+/build
 
 # dependencies
 /node_modules

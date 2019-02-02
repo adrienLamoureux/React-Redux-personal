@@ -1,34 +1,22 @@
 {
-  "name": "showtime_assessment",
-  "version": "0.0.0",
+  "name": "showtime-assessment",
+  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "webpack && webpack-dev-server",
-    "build": "webpack"
-  },
-  "author": "",
-  "license": "None",
+  "keywords": [],
+  "main": "src/index.jsx",
   "dependencies": {
-    "@types/react": "^16.0.37",
-    "@types/react-bootstrap": "^0.32.15",
-    "@types/react-dom": "^16.0.4",
-    "@types/react-redux": "^7.0.1",
-    "@types/react-router-bootstrap": "^0.24.5",
-    "@types/react-router-dom": "^4.3.1",
-    "awesome-typescript-loader": "^3.4.1",
-    "react": "^16.2.0",
-    "react-bootstrap": "^0.32.4",
-    "react-dom": "^16.2.0",
+    "classnames": "2.2.6",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
     "react-redux": "^6.0.0",
-    "react-router-bootstrap": "^0.24.4",
-    "react-router-dom": "^4.3.1",
-    "source-map-loader": "^0.2.3",
-    "typescript": "^2.7.1",
-    "webpack": "^3.11.0"
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.1"
   },
-  "devDependencies": {
-    "webpack-dev-server": "^2.11.1"
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

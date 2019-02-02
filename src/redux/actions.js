@@ -1,3 +1,5 @@
+import { VIEW_MOVIE } from "./actionTypes";
+
 /*import { ADD_TODO, TOGGLE_TODO, SET_FILTER } from "./actionTypes";
 
 let nextTodoId = 0;
@@ -17,3 +19,8 @@ export const toggleTodo = id => ({
 
 export const setFilter = filter => ({ type: SET_FILTER, payload: { filter } });
 */
+
+export const viewMovie = id => ({
+  type: VIEW_MOVIE,
+  payload: { id }
+});
