@@ -10,9 +10,7 @@ class MovieList extends React.Component {
 
   constructor(props){
     super(props);
-    //this.movies = props.movies || [{id: 1, content: "toto"}];
     this.movies = props.movies || this.state.movies;
-    //this.state = { name: this.props.defaultName };
   }
 
   render(){

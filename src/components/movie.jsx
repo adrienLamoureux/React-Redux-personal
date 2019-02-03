@@ -1,5 +1,5 @@
 import React from "react";
-import cx from "classnames";
+import MovieDetails from "./movieDetails";
 
 export default class Movie extends React.Component {
 
@@ -17,14 +17,16 @@ export default class Movie extends React.Component {
       onClick={() => {}}
     >
       {this.movie && this.movie.completed ? "👌" : "👋"}{" "}
-      <span
-        className={cx(
-          "movie-item__text",
-          this.movie && this.movie.completed && "movie-item__text--completed"
-        )}
-      >
-        {this.movie.content}
-      </span>
+      <div>
+        {this.movie.title}
+      </div>
+      <div>
+        {this.movie.releaseDate}
+      </div>
+      <div>
+        {this.movie.voteAverage}
+      </div>
+      <MovieDetails key={`movie-${this.movie.id}`} movie={this.movie}/>
     </li>
     );
   }
