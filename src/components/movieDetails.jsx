@@ -14,7 +14,7 @@ export default class MovieDetails extends React.Component {
     return (
       <div>
         <div>{this.movie.overView}</div>
-        <div>{this.movie.posterImage}</div>
+        <div><img className="movie-img" src={this.movie.posterImage} alt="no pictures so far..."/></div>
         <ul className="productionCompany-list">
         {this.movie.productionCompanyList && this.movie.productionCompanyList.length
           ? this.movie.productionCompanyList.map((productionCompany, index) => {
