@@ -12,7 +12,7 @@ export default class ProductionCompany extends React.Component {
   render(){
     return (
       <li
-      className="productionCompany-item"
+      className="list-inline-item productionCompany-item"
       onClick={() => {}}
     >
     {this.productionCompany.name}

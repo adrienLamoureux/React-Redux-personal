@@ -13,15 +13,17 @@ export default class MovieDetails extends React.Component {
   render(){
     return (
       <div>
-        <div>{this.movie.overView}</div>
-        <div><img className="movie-img" src={this.movie.posterImage} alt="no pictures so far..."/></div>
-        <ul className="productionCompany-list">
-        {this.movie.productionCompanyList && this.movie.productionCompanyList.length
-          ? this.movie.productionCompanyList.map((productionCompany, index) => {
-              return <ProductionCompany key={`productionCompany-${productionCompany.id}`} productionCompany={productionCompany} />;
-            })
-          : "No productionCompanies, yay!"}        
-        </ul>
+        <div className="movie-synopsis">Synopsis</div>
+        <div className="movie-overview">{this.movie.overView}</div>
+        <div className="movie-production"><div className="produced">produced by</div>
+          <ul className="list-inline productionCompany-list">
+          {this.movie.productionCompanyList && this.movie.productionCompanyList.length
+            ? this.movie.productionCompanyList.map((productionCompany, index) => {
+                return <ProductionCompany key={`productionCompany-${productionCompany.id}`} productionCompany={productionCompany} />;
+              })
+            : "toto"}        
+          </ul>
+        </div>
       </div>
     );
   }
