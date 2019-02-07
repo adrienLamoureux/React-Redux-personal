@@ -21,7 +21,7 @@ class MovieList extends React.Component {
             ? this.movies.map((movie, index) => {
                 return <div className="movie-item col-xl-4 col-sm-6 col-12"><Movie key={`movie-${movie.id}`} movie={movie} /></div>;
               })
-            : "No movies, yay!"}
+            : ""}
           </div>
       </div>
     )};

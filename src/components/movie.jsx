@@ -1,12 +1,18 @@
 import React from "react";
 import MovieDetails from "./movieDetails";
 import { Button, CardDeck, Card, ListGroup } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class Movie extends React.Component {
   
   constructor(props){
     super(props);
     this.state = { details: false };
+    let votes = [];
+    for(let i=0;i<props.movie.voteAverage;++i){
+      votes.push(<FontAwesomeIcon icon="star" className="movie-vote-star-item"/>);
+    }
+    this.state.votes = votes;
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -18,7 +24,7 @@ export default class Movie extends React.Component {
 
   render(){
     return (
-      <Card onClick={() => {this.handleClick()}}>
+      <Card className="card" onClick={() => {this.handleClick()}}>
         <Card.Img variant="top" className="movie-img" src={this.props.movie.posterImage} />
         <Card.Header className="movie-title">{this.props.movie.title}</Card.Header>
         <Card.Body>
@@ -26,7 +32,7 @@ export default class Movie extends React.Component {
             <ListGroup variant="flush">
               <ListGroup.Item>Type: {this.props.movie.type}</ListGroup.Item>
               <ListGroup.Item>Released: {this.props.movie.releaseDate}</ListGroup.Item>
-              <ListGroup.Item>Vote average: {this.props.movie.voteAverage}/5</ListGroup.Item>
+              <ListGroup.Item className="movie-vote">Vote average: <ul className="movie-vote-star">{this.state.votes}</ul></ListGroup.Item>
               {this.state.details ? <ListGroup.Item><MovieDetails key={`movie-${this.props.movie.id}`} movie={this.props.movie}/></ListGroup.Item> : null}
             </ListGroup>
           </Card.Text>
