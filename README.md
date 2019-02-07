@@ -1,1 +1,1 @@
-# showtime-assessment
+# My movie React/Redux app

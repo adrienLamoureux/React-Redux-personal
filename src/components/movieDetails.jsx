@@ -21,7 +21,7 @@ export default class MovieDetails extends React.Component {
             ? this.movie.productionCompanyList.map((productionCompany, index) => {
                 return <ProductionCompany key={`productionCompany-${productionCompany.id}`} productionCompany={productionCompany} />;
               })
-            : "toto"}        
+            : ""}
           </ul>
         </div>
       </div>

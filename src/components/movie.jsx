@@ -1,6 +1,6 @@
 import React from "react";
 import MovieDetails from "./movieDetails";
-import { Button, CardDeck, Card, ListGroup } from 'react-bootstrap';
+import { Card, ListGroup } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class Movie extends React.Component {
